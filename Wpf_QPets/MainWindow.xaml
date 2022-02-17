@@ -3,24 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:Wpf_QPets"
         mc:Ignorable="d"
         Title="MainWindow" Width="270" Height="390" WindowStyle="None" Background="Transparent">
     <Grid>
         <StackPanel Margin="10">
-            <Rectangle x:Name="Body" Width="250" Height="370">
-                <Rectangle.Triggers>
-                    <EventTrigger RoutedEvent="Rectangle.Loaded">
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation>
-                                    
-                                </DoubleAnimation>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </Rectangle.Triggers>
-            </Rectangle>
+            <Image x:Name="Body" Width="250" Height="370" MouseLeftButtonDown="Body_MouseLeftButtonDown" MouseLeftButtonUp="Body_MouseLeftButtonUp">
+                <Image.ContextMenu>
+                    <ContextMenu x:Name="SetType" StaysOpen="True">
+                        <MenuItem Header="relax" Click="RelaxClick"></MenuItem>
+                        <MenuItem Header="sit" Click="SitClick"></MenuItem>
+                        <MenuItem Header="sleep" Click="SleepClick"></MenuItem>
+                        <MenuItem Header="special" Click="SpecialClick"></MenuItem>
+                    </ContextMenu>
+                </Image.ContextMenu>
+            </Image>
         </StackPanel>
     </Grid>
 </Window>
