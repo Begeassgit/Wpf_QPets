@@ -6,10 +6,10 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:Wpf_QPets"
         mc:Ignorable="d"
-        Title="MainWindow" Width="270" Height="390" WindowStyle="None" Background="Transparent">
+        Title="ArknightsQPets" Width="270" Height="390" WindowStyle="None" Background="Transparent" Icon="/iconmonstr-knight-14-64.png">
     <Grid>
         <StackPanel Margin="10">
-            <Image x:Name="Body" Width="250" Height="370" MouseLeftButtonDown="Body_MouseLeftButtonDown" MouseLeftButtonUp="Body_MouseLeftButtonUp">
+            <Image x:Name="Body" Width="250" Height="370" MouseLeftButtonDown="Body_MouseLeftButtonDown">
                 <Image.ContextMenu>
                     <ContextMenu x:Name="SetType" StaysOpen="True">
                         <MenuItem Header="relax" Click="RelaxClick"></MenuItem>

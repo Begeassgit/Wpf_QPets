@@ -24,60 +24,110 @@ namespace Wpf_QPets
     /// </summary>
     public partial class MainWindow : Window
     {
+        ImageInfo imageInfo = new();
+        Dictionary<string, string> imagesOnDisk = new();
+        ImageRead imageRead = new();
 
-        string temp;
         public MainWindow()
         {
             InitializeComponent();
             this.AllowsTransparency = true;
-            MyAnimation("relax.gif");
+            SetImageName();
+            MyAnimation();
         }
 
-        internal void MyAnimation(string type)
+        internal void SetImageName()
         {
-            BitmapImage image = new BitmapImage();
-            ReadImageName readImageName = new ReadImageName();
-            foreach(string name in readImageName.GetImageNames())
+            imageInfo.Type = "relax.gif";
+        }
+
+        internal void SetImageName(string type)
+        {
+            if (CheckFileName(type))
             {
-                if (name == type)
-                {
-                    image.BeginInit();
-                    image.UriSource = new Uri(@"Image\" + type, UriKind.Relative);
-                    image.EndInit();
-                    ImageBehavior.SetAnimatedSource(Body, image);
-                    ImageBehavior.SetRepeatBehavior(Body, RepeatBehavior.Forever);
-                }
-                
-            }    
+                imageInfo.Type = type;
+            }
+            else
+            {
+                imageInfo.Type = "relax.gif";
+            }
+            
+
+        }
+
+        internal bool CheckFileName(string type)
+        {
+
+            imagesOnDisk = imageRead.GetImageNames();
+            if (imagesOnDisk.ContainsKey(type))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        internal void MyAnimation()
+        {
+            BitmapImage image = new();
+            image.BeginInit();
+            image.UriSource = new Uri(@"Image\" + imageInfo.Type, UriKind.Relative);
+            image.EndInit();
+            ImageBehavior.SetAnimatedSource(Body, image);
+            ImageBehavior.SetRepeatBehavior(Body, RepeatBehavior.Forever);
+        }
+
+        internal async void MyAnimation(int time,string type)
+        {
+            BitmapImage image = new();
+            image.BeginInit();
+            image.UriSource = new Uri(@"Image\" + imageInfo.Type, UriKind.Relative);
+            image.EndInit();
+            ImageBehavior.SetAnimatedSource(Body, image);
+            ImageBehavior.SetRepeatBehavior(Body, RepeatBehavior.Forever);
+
+            await Task.Delay(time);
+
+            SetImageName(type.Remove(0,6));
+            BitmapImage image_reload = new();
+            image_reload.BeginInit();
+            image_reload.UriSource = new Uri(type, UriKind.Relative);
+            image_reload.EndInit();
+            ImageBehavior.SetAnimatedSource(Body, image_reload);
+            ImageBehavior.SetRepeatBehavior(Body, RepeatBehavior.Forever);
         }
         private void RelaxClick(object sender, RoutedEventArgs e)
         {
-            MyAnimation("relax.gif");
+            SetImageName("relax.gif");
+            MyAnimation();
         }
 
         private void SitClick(object sender, RoutedEventArgs e)
         {
-            MyAnimation("sit.gif");
+            SetImageName("sit.gif");
+            MyAnimation();
         }
 
         private void SleepClick(object sender, RoutedEventArgs e)
         {
-            MyAnimation("sleep.gif");
+            SetImageName("sleep.gif");
+            MyAnimation();
         }
         private void SpecialClick(object sender, RoutedEventArgs e)
         {
-            MyAnimation("special.gif");
+            SetImageName("special.gif");
+            MyAnimation();
         }
 
         private void Body_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            temp = ImageBehavior.GetAnimatedSource(Body).ToString();
-            MyAnimation("interact.gif");          
-        }
-
-        private void Body_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            MyAnimation(temp.Substring(6));
+            string temp=ImageBehavior.GetAnimatedSource(Body).ToString();
+            SetImageName("interact.gif");
+            MyAnimation(1000,temp);          
+            
         }
     }
 }

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="iconmonstr-knight-14-64.png" />
     <None Remove="Image\interact.gif" />
   </ItemGroup>
 	
@@ -16,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="iconmonstr-knight-14-64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Image\interact.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

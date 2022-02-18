@@ -7,19 +7,19 @@ using System.IO;
 
 namespace Wpf_QPets
 {
-    public class ReadImageName
+    public class ImageRead
     {
-        public string[] GetImageNames()
+        public Dictionary<string,string> GetImageNames()
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(@"Image");
             int imageCount = directoryInfo.GetFiles().Length;
-            string[] imageName = new string[imageCount];
+            Dictionary<string,string> fileNames = new();
             for (int i = 0; i < imageCount; i++)
             {
-                imageName[i]=directoryInfo.GetFiles()[i].Name;
+               fileNames.Add(directoryInfo.GetFiles()[i].Name, directoryInfo.GetFiles()[i].Name);
             }
 
-            return imageName;
+            return fileNames;
         }
     }
 }
