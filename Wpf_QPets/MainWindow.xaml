@@ -13,6 +13,7 @@
                 <Image.ContextMenu>
                     <ContextMenu x:Name="SetType" StaysOpen="True">
                         <MenuItem Header="relax" Click="RelaxClick"></MenuItem>
+                        <MenuItem Header="move" Click="MoveClick"></MenuItem>
                         <MenuItem Header="sit" Click="SitClick"></MenuItem>
                         <MenuItem Header="sleep" Click="SleepClick"></MenuItem>
                         <MenuItem Header="special" Click="SpecialClick"></MenuItem>
