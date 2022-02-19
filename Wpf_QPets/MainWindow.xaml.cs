@@ -136,5 +136,18 @@ namespace Wpf_QPets
                 DragMove();
             }
         }
+
+        private async void MoveClick(object sender, RoutedEventArgs e)
+        {
+            double screenWidth=SystemParameters.WorkArea.Width;
+            SetImageName("special.gif");
+            MyAnimation();
+            Left = 300;
+            for(double x = 0; x < screenWidth; x++)
+            {
+                Left=Left+x;
+                await Task.Delay(1000);
+            }
+        }
     }
 }
