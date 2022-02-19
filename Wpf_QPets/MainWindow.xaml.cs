@@ -31,7 +31,7 @@ namespace Wpf_QPets
         public MainWindow()
         {
             InitializeComponent();
-            this.AllowsTransparency = true;
+            AllowsTransparency = true;
             SetImageName();
             MyAnimation();
         }
@@ -122,12 +122,19 @@ namespace Wpf_QPets
             MyAnimation();
         }
 
-        private void Body_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Body_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            string temp=ImageBehavior.GetAnimatedSource(Body).ToString();
+            string temp = ImageBehavior.GetAnimatedSource(Body).ToString();
             SetImageName("interact.gif");
-            MyAnimation(1000,temp);          
-            
+            MyAnimation(1000, temp);
+        }
+
+        private void Body_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
     }
 }

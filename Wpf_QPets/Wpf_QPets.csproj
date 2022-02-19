@@ -5,11 +5,17 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Qpets_64.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="iconmonstr-knight-14-64.png" />
     <None Remove="Image\interact.gif" />
+    <None Remove="Qpets_64.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Qpets_64.ico" />
   </ItemGroup>
 	
   <ItemGroup>
@@ -33,6 +39,9 @@
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Image\sleep.gif">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Qpets_64.ico">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Resource>
   </ItemGroup>
