@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="iconmonstr-knight-14-64.png" />
     <None Remove="Image\interact.gif" />
+    <None Remove="Image\move.gif" />
     <None Remove="Qpets_64.ico" />
   </ItemGroup>
 
@@ -27,6 +28,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Image\interact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\move.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Image\special.gif">

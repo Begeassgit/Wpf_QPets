@@ -139,14 +139,24 @@ namespace Wpf_QPets
 
         private async void MoveClick(object sender, RoutedEventArgs e)
         {
-            double screenWidth=SystemParameters.WorkArea.Width;
-            SetImageName("special.gif");
+            double screenWidth = SystemParameters.WorkArea.Width - 500.0;
+            SetImageName("move.gif");
             MyAnimation();
-            Left = 300;
-            for(double x = 0; x < screenWidth; x++)
+            Left = 100;
+            for(double x = 100; x < screenWidth; x++)
             {
-                Left=Left+x;
-                await Task.Delay(1000);
+                if (Left <= screenWidth)
+                {
+                    Left += 1.8;
+                    await Task.Delay(150);
+                }
+                else
+                {
+                    Left = 100;
+                    Left += 1.8;
+                    await Task.Delay(150);
+                }
+               
             }
         }
     }
