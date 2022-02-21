@@ -143,7 +143,7 @@ namespace Wpf_QPets
             SetImageName("move.gif");
             MyAnimation();
             Left = 100;
-            while(true)
+            while(imageInfo.Type=="move.gif")
             {
                 if (Left <= screenWidth)
                 {
