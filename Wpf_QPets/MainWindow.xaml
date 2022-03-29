@@ -23,6 +23,10 @@
                         <MenuItem Header="sit" Click="SitClick"></MenuItem>
                         <MenuItem Header="sleep" Click="SleepClick"></MenuItem>
                         <MenuItem Header="special" Click="SpecialClick"></MenuItem>
+                        <MenuItem Header="figure">
+                            <MenuItem Header="年" Click="ClickNian"></MenuItem>
+                            <MenuItem Header="远山" Click="ClickFmout"></MenuItem>
+                        </MenuItem>
                     </ContextMenu>
                 </Image.ContextMenu>
             </Image>

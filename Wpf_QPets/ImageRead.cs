@@ -9,9 +9,9 @@ namespace Wpf_QPets
 {
     public class ImageRead
     {
-        public Dictionary<string,string> GetImageNames()
+        public Dictionary<string,string> GetImageNames(string role)
         {
-            DirectoryInfo directoryInfo = new DirectoryInfo(@"Image");
+            DirectoryInfo directoryInfo = new DirectoryInfo(@"Image/"+role);
             int imageCount = directoryInfo.GetFiles().Length;
             Dictionary<string,string> fileNames = new();
             for (int i = 0; i < imageCount; i++)

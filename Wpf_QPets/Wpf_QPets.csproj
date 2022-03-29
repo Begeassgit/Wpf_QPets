@@ -10,12 +10,21 @@
 
   <ItemGroup>
     <None Remove="iconmonstr-knight-14-64.png" />
+    <None Remove="Image\FMOUT\interact.gif" />
+    <None Remove="Image\FMOUT\move.gif" />
+    <None Remove="Image\FMOUT\relax.gif" />
+    <None Remove="Image\FMOUT\sit.gif" />
+    <None Remove="Image\FMOUT\sleep.gif" />
+    <None Remove="Image\FMOUT\special.gif" />
     <None Remove="Image\interact.gif" />
     <None Remove="Image\move.gif" />
     <None Remove="Qpets_64.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Image\FMOUT\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Qpets_64.ico" />
   </ItemGroup>
 	
@@ -27,22 +36,29 @@
     <Resource Include="iconmonstr-knight-14-64.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Image\interact.gif">
+    <Resource Include="Image\FMOUT\interact.gif" />
+    <Resource Include="Image\FMOUT\move.gif" />
+    <Resource Include="Image\FMOUT\relax.gif" />
+    <Resource Include="Image\FMOUT\sit.gif" />
+    <Resource Include="Image\FMOUT\sleep.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Image\move.gif">
+    <Resource Include="Image\NIAN\interact.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Image\special.gif">
+    <Resource Include="Image\NIAN\move.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-	<Resource Include="Image\sit.gif">
+    <Resource Include="Image\NIAN\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+	<Resource Include="Image\NIAN\sit.gif">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Image\relax.gif">
+	<Resource Include="Image\NIAN\relax.gif">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Image\sleep.gif">
+	<Resource Include="Image\NIAN\sleep.gif">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Qpets_64.ico">

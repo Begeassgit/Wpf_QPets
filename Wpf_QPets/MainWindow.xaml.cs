@@ -32,8 +32,19 @@ namespace Wpf_QPets
         {
             InitializeComponent();
             AllowsTransparency = true;
+            SetImageRole();
             SetImageName();
             MyAnimation();
+        }
+
+        internal void SetImageRole()
+        {
+            imageInfo.Role = "NIAN";
+        }
+
+        internal void SetImageRole(string role)
+        {
+            imageInfo.Role = role;
         }
 
         internal void SetImageName()
@@ -57,8 +68,16 @@ namespace Wpf_QPets
 
         internal bool CheckFileName(string type)
         {
-
-            imagesOnDisk = imageRead.GetImageNames();
+            if (imageInfo.Role != null)
+            {
+                imagesOnDisk = imageRead.GetImageNames(imageInfo.Role);
+            }
+            else
+            {
+                imageInfo.Role = "NIAN";
+                imagesOnDisk=imageRead.GetImageNames(imageInfo.Role);
+            }
+                
             if (imagesOnDisk.ContainsKey(type))
             {
                 return true;
@@ -74,7 +93,7 @@ namespace Wpf_QPets
         {
             BitmapImage image = new();
             image.BeginInit();
-            image.UriSource = new Uri(@"Image\" + imageInfo.Type, UriKind.Relative);
+            image.UriSource = new Uri(@"Image\" +imageInfo.Role + @"\" + imageInfo.Type, UriKind.Relative);
             image.EndInit();
             ImageBehavior.SetAnimatedSource(Body, image);
             ImageBehavior.SetRepeatBehavior(Body, RepeatBehavior.Forever);
@@ -84,7 +103,7 @@ namespace Wpf_QPets
         {
             BitmapImage image = new();
             image.BeginInit();
-            image.UriSource = new Uri(@"Image\" + imageInfo.Type, UriKind.Relative);
+            image.UriSource = new Uri(@"Image\" + imageInfo.Role + @"\" + imageInfo.Type, UriKind.Relative);
             image.EndInit();
             ImageBehavior.SetAnimatedSource(Body, image);
             ImageBehavior.SetRepeatBehavior(Body, RepeatBehavior.Forever);
@@ -158,6 +177,18 @@ namespace Wpf_QPets
                 }
                
             }
+        }
+
+        private void ClickNian(object sender, RoutedEventArgs e)
+        {
+            SetImageRole("NIAN");
+            MyAnimation();
+        }
+
+        private void ClickFmout(object sender, RoutedEventArgs e)
+        {
+            SetImageRole("FMOUT");
+            MyAnimation();
         }
     }
 }
