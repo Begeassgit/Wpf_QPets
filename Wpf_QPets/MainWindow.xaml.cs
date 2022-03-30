@@ -145,7 +145,14 @@ namespace Wpf_QPets
         {
             string temp = ImageBehavior.GetAnimatedSource(Body).ToString();
             SetImageName("interact.gif");
-            MyAnimation(1000, temp);
+
+            switch (imageInfo.Role)
+            {
+                case "DASKADI": 
+                    MyAnimation(2500, temp); break;
+                default:
+                    MyAnimation(1000, temp); break;
+            }  
         }
 
         private void Body_MouseMove(object sender, MouseEventArgs e)
@@ -188,6 +195,18 @@ namespace Wpf_QPets
         private void ClickFmout(object sender, RoutedEventArgs e)
         {
             SetImageRole("FMOUT");
+            MyAnimation();
+        }
+
+        private void ClickMudrok(object sender, RoutedEventArgs e)
+        {
+            SetImageRole("MUDROK");
+            MyAnimation();
+        }
+
+        private void ClickDASkadi(object sender, RoutedEventArgs e)
+        {
+            SetImageRole("DASKADI");
             MyAnimation();
         }
     }

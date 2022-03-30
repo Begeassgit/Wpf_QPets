@@ -10,6 +10,12 @@
 
   <ItemGroup>
     <None Remove="iconmonstr-knight-14-64.png" />
+    <None Remove="Image\DASKADI\interact.gif" />
+    <None Remove="Image\DASKADI\move.gif" />
+    <None Remove="Image\DASKADI\relax.gif" />
+    <None Remove="Image\DASKADI\sit.gif" />
+    <None Remove="Image\DASKADI\sleep.gif" />
+    <None Remove="Image\DASKADI\special.gif" />
     <None Remove="Image\FMOUT\interact.gif" />
     <None Remove="Image\FMOUT\move.gif" />
     <None Remove="Image\FMOUT\relax.gif" />
@@ -18,10 +24,22 @@
     <None Remove="Image\FMOUT\special.gif" />
     <None Remove="Image\interact.gif" />
     <None Remove="Image\move.gif" />
+    <None Remove="Image\MUDROK\interact.gif" />
+    <None Remove="Image\MUDROK\move.gif" />
+    <None Remove="Image\MUDROK\relax.gif" />
+    <None Remove="Image\MUDROK\sit.gif" />
+    <None Remove="Image\MUDROK\sleep.gif" />
+    <None Remove="Image\MUDROK\special.gif" />
     <None Remove="Qpets_64.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Image\DASKADI\interact.gif" />
+    <Resource Include="Image\DASKADI\move.gif" />
+    <Resource Include="Image\DASKADI\relax.gif" />
+    <Resource Include="Image\DASKADI\sit.gif" />
+    <Resource Include="Image\DASKADI\sleep.gif" />
+    <Resource Include="Image\DASKADI\special.gif" />
     <Resource Include="Image\FMOUT\special.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -43,6 +61,12 @@
     <Resource Include="Image\FMOUT\sleep.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Image\MUDROK\interact.gif" />
+    <Resource Include="Image\MUDROK\move.gif" />
+    <Resource Include="Image\MUDROK\relax.gif" />
+    <Resource Include="Image\MUDROK\sit.gif" />
+    <Resource Include="Image\MUDROK\sleep.gif" />
+    <Resource Include="Image\MUDROK\special.gif" />
     <Resource Include="Image\NIAN\interact.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

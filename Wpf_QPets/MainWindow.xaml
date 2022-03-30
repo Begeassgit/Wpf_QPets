@@ -25,7 +25,9 @@
                         <MenuItem Header="special" Click="SpecialClick"></MenuItem>
                         <MenuItem Header="figure">
                             <MenuItem Header="年" Click="ClickNian"></MenuItem>
+                            <MenuItem Header="浊心斯卡蒂" Click="ClickDASkadi"></MenuItem>
                             <MenuItem Header="远山" Click="ClickFmout"></MenuItem>
+                            <MenuItem Header="泥岩" Click="ClickMudrok"></MenuItem>
                         </MenuItem>
                     </ContextMenu>
                 </Image.ContextMenu>
