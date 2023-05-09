@@ -7,14 +7,14 @@
         xmlns:local="clr-namespace:Wpf_QPets"
         mc:Ignorable="d"
         Title="ArknightsQPets" 
-        Width="270" Height="400" 
+        Width="Auto" Height="Auto" SizeToContent="WidthAndHeight"
         WindowStyle="None" 
         Background="Transparent" 
         Icon="/iconmonstr-knight-14-64.png"
         AllowsTransparency="True" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Margin="10">
-            <Image x:Name="Body" Width="250" Height="370" 
+            <Image x:Name="Body" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center"
                    MouseLeftButtonUp="Body_MouseLeftButtonUp" MouseMove="Body_MouseMove">
                 <Image.ContextMenu>
                     <ContextMenu x:Name="SetType" StaysOpen="True">
@@ -25,7 +25,10 @@
                         <MenuItem Header="special" Click="SpecialClick"></MenuItem>
                         <MenuItem Header="figure">
                             <MenuItem Header="年" Click="ClickNian"></MenuItem>
+                            <MenuItem Header="缪尔赛思" Click="ClickMuelsyse"></MenuItem>
+                            <MenuItem Header="假日威龙陈" Click="ClickChenSummer"></MenuItem>
                             <MenuItem Header="浊心斯卡蒂" Click="ClickDASkadi"></MenuItem>
+                            <MenuItem Header="凯尔希" Click="ClickKaltsit"></MenuItem>
                             <MenuItem Header="远山" Click="ClickFmout"></MenuItem>
                             <MenuItem Header="泥岩" Click="ClickMudrok"></MenuItem>
                         </MenuItem>

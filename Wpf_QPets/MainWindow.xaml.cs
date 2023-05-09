@@ -1,19 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Drawing;
 using WpfAnimatedGif;
 
 
@@ -99,7 +90,7 @@ namespace Wpf_QPets
             ImageBehavior.SetRepeatBehavior(Body, RepeatBehavior.Forever);
         }
 
-        internal async void MyAnimation(int time,string type)
+        internal async void MyAnimation(int time,string type) 
         {
             BitmapImage image = new();
             image.BeginInit();
@@ -150,6 +141,12 @@ namespace Wpf_QPets
             {
                 case "DASKADI": 
                     MyAnimation(2500, temp); break;
+                case "CHEN_SUMMER":
+                    MyAnimation(1300, temp); break;
+                case "MLYSS":
+                    MyAnimation(1500, temp); break;
+                case "KALTSIT":
+                    MyAnimation(1700, temp); break;
                 default:
                     MyAnimation(1000, temp); break;
             }  
@@ -207,6 +204,24 @@ namespace Wpf_QPets
         private void ClickDASkadi(object sender, RoutedEventArgs e)
         {
             SetImageRole("DASKADI");
+            MyAnimation();
+        }
+
+        private void ClickMuelsyse(object sender, RoutedEventArgs e) 
+        {
+            SetImageRole("MLYSS");
+            MyAnimation();
+        }
+
+        private void ClickChenSummer(object sender, RoutedEventArgs e)
+        {
+            SetImageRole("CHEN_SUMMER");
+            MyAnimation();
+        }
+
+        private void ClickKaltsit(object sender, RoutedEventArgs e)
+        {
+            SetImageRole("KALTSIT");
             MyAnimation();
         }
     }

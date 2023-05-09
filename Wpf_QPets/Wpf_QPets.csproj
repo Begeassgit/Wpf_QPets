@@ -10,6 +10,12 @@
 
   <ItemGroup>
     <None Remove="iconmonstr-knight-14-64.png" />
+    <None Remove="Image\CHEN_SUMMER\interact.gif" />
+    <None Remove="Image\CHEN_SUMMER\move.gif" />
+    <None Remove="Image\CHEN_SUMMER\relax.gif" />
+    <None Remove="Image\CHEN_SUMMER\sit.gif" />
+    <None Remove="Image\CHEN_SUMMER\sleep.gif" />
+    <None Remove="Image\CHEN_SUMMER\special.gif" />
     <None Remove="Image\DASKADI\interact.gif" />
     <None Remove="Image\DASKADI\move.gif" />
     <None Remove="Image\DASKADI\relax.gif" />
@@ -23,6 +29,18 @@
     <None Remove="Image\FMOUT\sleep.gif" />
     <None Remove="Image\FMOUT\special.gif" />
     <None Remove="Image\interact.gif" />
+    <None Remove="Image\KALTSIT\interact.gif" />
+    <None Remove="Image\KALTSIT\move.gif" />
+    <None Remove="Image\KALTSIT\relax.gif" />
+    <None Remove="Image\KALTSIT\sit.gif" />
+    <None Remove="Image\KALTSIT\sleep.gif" />
+    <None Remove="Image\KALTSIT\special.gif" />
+    <None Remove="Image\MLYSS\interact.gif" />
+    <None Remove="Image\MLYSS\move.gif" />
+    <None Remove="Image\MLYSS\relax.gif" />
+    <None Remove="Image\MLYSS\sit.gif" />
+    <None Remove="Image\MLYSS\sleep.gif" />
+    <None Remove="Image\MLYSS\special.gif" />
     <None Remove="Image\move.gif" />
     <None Remove="Image\MUDROK\interact.gif" />
     <None Remove="Image\MUDROK\move.gif" />
@@ -34,15 +52,81 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Image\DASKADI\interact.gif" />
-    <Resource Include="Image\DASKADI\move.gif" />
-    <Resource Include="Image\DASKADI\relax.gif" />
-    <Resource Include="Image\DASKADI\sit.gif" />
-    <Resource Include="Image\DASKADI\sleep.gif" />
-    <Resource Include="Image\DASKADI\special.gif" />
-    <Resource Include="Image\FMOUT\special.gif">
+    <Content Include="Image\CHEN_SUMMER\move.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
+    <Content Include="Image\CHEN_SUMMER\relax.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\CHEN_SUMMER\sit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\CHEN_SUMMER\sleep.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\CHEN_SUMMER\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\DASKADI\interact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\DASKADI\move.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\DASKADI\relax.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\DASKADI\sit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\DASKADI\sleep.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\DASKADI\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\FMOUT\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\CHEN_SUMMER\interact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\KALTSIT\interact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\KALTSIT\move.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\KALTSIT\relax.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\KALTSIT\sit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\KALTSIT\sleep.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\KALTSIT\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MLYSS\interact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MLYSS\move.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MLYSS\relax.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MLYSS\sit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MLYSS\sleep.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MLYSS\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Qpets_64.ico" />
   </ItemGroup>
 	
@@ -54,37 +138,57 @@
     <Resource Include="iconmonstr-knight-14-64.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Image\FMOUT\interact.gif" />
-    <Resource Include="Image\FMOUT\move.gif" />
-    <Resource Include="Image\FMOUT\relax.gif" />
-    <Resource Include="Image\FMOUT\sit.gif" />
-    <Resource Include="Image\FMOUT\sleep.gif">
+    <Content Include="Image\FMOUT\interact.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Image\MUDROK\interact.gif" />
-    <Resource Include="Image\MUDROK\move.gif" />
-    <Resource Include="Image\MUDROK\relax.gif" />
-    <Resource Include="Image\MUDROK\sit.gif" />
-    <Resource Include="Image\MUDROK\sleep.gif" />
-    <Resource Include="Image\MUDROK\special.gif" />
-    <Resource Include="Image\NIAN\interact.gif">
+    </Content>
+    <Content Include="Image\FMOUT\move.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Image\NIAN\move.gif">
+    </Content>
+    <Content Include="Image\FMOUT\relax.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Image\NIAN\special.gif">
+    </Content>
+    <Content Include="Image\FMOUT\sit.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-	<Resource Include="Image\NIAN\sit.gif">
+    </Content>
+    <Content Include="Image\FMOUT\sleep.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MUDROK\interact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MUDROK\move.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MUDROK\relax.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MUDROK\sit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MUDROK\sleep.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\MUDROK\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\NIAN\interact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\NIAN\move.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\NIAN\special.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+	<Content Include="Image\NIAN\sit.gif">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</Resource>
-	<Resource Include="Image\NIAN\relax.gif">
+	</Content>
+	<Content Include="Image\NIAN\relax.gif">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</Resource>
-	<Resource Include="Image\NIAN\sleep.gif">
+	</Content>
+	<Content Include="Image\NIAN\sleep.gif">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</Resource>
+	</Content>
 	<Resource Include="Qpets_64.ico">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Resource>
